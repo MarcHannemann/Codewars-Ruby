@@ -1,0 +1,18 @@
+# Speed_Contraol_Codewars
+# (3600 * delta_distance) / s
+x = [0.0, 0.19, 0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 2.0, 2.25]
+s = 15
+
+def gps(s, x)
+  results = []
+  x.each_cons(2).each { |a, b| results.push((b - a) / s * 3600) }
+  results.max
+end
+
+def gps(s, x)
+  x.each_cons(2).map { |a, b| (b - a) / s * 3600}.max
+end
+
+def gps(s, x)
+  x.size <= 1 ? 0 : x.each_cons(2).map { |a, b| (b - a) / s * 3600}.max
+end
