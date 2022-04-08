@@ -1,0 +1,47 @@
+# List Filtering
+# In this kata you will create a function that takes a list of non-negative integers
+# and strings and returns a new list with the strings filtered out.
+
+filter_list([1,2,'a','b']) == [1,2]
+filter_list([1,'a','b',0,15]) == [1,0,15]
+filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
+
+def filter_list(l)
+  l.delete("^A-Za-z")
+end
+
+a1 = a.reject {|element| element.to_s.start_with?('b') }
+def filter_list(l)
+  l.reject("^A-Za-z")
+end
+
+def filter_list(l)
+  l.grep(/^0-9/)
+end
+
+# get array
+# turn every element to string
+# sort out the string that are not "0-9"
+# return filtered array
+def filter_list(l)
+  l.map { |element| element.to_s.delete("A-Za-z") }
+end
+
+cities.reject { |c| c.empty? }
+def filter_list(l)
+  l.map { |element| element.to_s.delete("A-Za-z") }.reject { |c| c.empty? }
+end
+
+# wrong abroach - Numbers as a string should be deleted as well
+def filter_list(l)
+  l.map { |element| element.to_s.delete("A-Za-z") }.reject { |c| c.empty? }
+end
+
+# Working Solution
+def filter_list(l)
+  l.reject { |ele| ele.is_a?(String) }
+end
+
+def filter_list(l)
+  l.grep(Numeric)
+end
