@@ -1,1 +1,8 @@
-# Simple Fun #176: Reverse Letter
+# simple fun reverse Letter
+
+# I forgot to tunr autosave on :D
+# so, this is the end solution
+
+def reverse_letter(string)
+  string.delete("^a-zA-Z").reverse
+end
