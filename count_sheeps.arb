@@ -1,0 +1,13 @@
+# count sheeps
+
+# working Solution
+def countSheeps array
+  sum = 0
+  array.each { |sheep| sheep == true ? sum += 1 : nil}
+  return sum
+end
+
+# another wokring solution
+def countSheeps array
+  array.count(true)
+end
