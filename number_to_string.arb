@@ -1,0 +1,4 @@
+# working and final solution
+def number_to_string(num)
+  num.to_s
+end

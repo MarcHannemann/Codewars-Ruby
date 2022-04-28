@@ -1,0 +1,6 @@
+# paperwork
+
+#working and final Solution
+def paperwork(n, m)
+  n < 0 || m < 0 ? 0 : n*m
+end

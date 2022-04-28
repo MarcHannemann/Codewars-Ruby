@@ -1,0 +1,34 @@
+# Two to One
+
+# a = "xyaabbbccccdefww"
+# b = "xxxxyyyyabklmopq"
+# longest(a, b) -> "abcdefklmopqwxy"
+# a = "abcdefghijklmnopqrstuvwxyz"
+# longest(a, a) -> "abcdefghijklmnopqrstuvwxyz"
+
+def longest(a1, a2)
+  lets_go =  []
+  lets_go << a1.chars
+  lets_go << a2.chars
+  lets_go.uniq.sort.join("")
+end
+
+def longest(a1, a2)
+  lets_go =  []
+  lets_go << a1.chars
+  lets_go << a2.chars
+  string = lets_go.uniq.sort.join("")
+end
+
+def longest(a1, a2)
+  lets_go = []
+  given = a1 + a2
+  lets_go << given.chars
+  string = lets_go.sort.uniq.join("")
+end
+
+#working solution
+def longest(a1, a2)
+  given = a1 + a2
+  given.chars.sort.uniq.join("")
+end
