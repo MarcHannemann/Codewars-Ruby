@@ -1,0 +1,31 @@
+# reversed words
+
+def reverse_words(str)
+  new_arr = []
+  new_arr << str.split(" ")
+  new_arr.map { |word| word.reverse}
+end
+
+def reverse_words(str)
+  new_arr = []
+  new_arr << str.split(" ")
+  new_arr.flatten.map { |word| word.reverse}
+end
+
+# does not work with "Double  spaced  words"
+def reverse_words(str)
+  new_arr = []
+  new_arr << str.split(" ")
+  new_arr.flatten.map { |word| word.reverse}.join(" ")
+end
+
+def reverse_words(str)
+  str.split(" ").map { |word| word.reverse }.join(" ")
+end
+
+str = 'double  spaced  words'
+
+# working and final Solution
+def reverse_words(str)
+  str.split(/\s/).map { |word| word.reverse }.join(" ")
+end
