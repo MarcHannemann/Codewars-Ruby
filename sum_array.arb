@@ -1,0 +1,41 @@
+# sum_array
+
+# { 6, 2, 1, 8, 10 } => 16
+# { 1, 1, 11, 2, 3 } => 6
+# If an empty value ( null, None, Nothing etc. ) is given instead of an array,
+# or the given array is an empty list or a list with only 1 element, return 0.
+
+arr = [1, 55, 16, 25, 100, 22, 34, 19]
+
+def sum_array(arr)
+  arr = 0 ? 0 : arr.sort.shift.pop.sum
+end
+
+def sum_array(arr)
+  arr = 0 ? 0 : arr.sort.delete_at(0).delete_at(-1).sum
+end
+
+def sum_array(arr)
+  arr = 0 ? 0 : arr.sort.drop(0).
+end
+
+def sum_array(arr)
+  arr = 0 ? 0 : arr.sort[1..-2].sum
+end
+
+def sum_array(arr)
+  arr = 0 ? 0 : new_arr = arr.sort.drop(0).pop
+                new_arr.sum
+                arr.sort.drop(1).pop(1).sum
+end
+
+def sum_array(arr)
+  new_arr = []
+  new_arr << arr.sort[1..-2]
+  new_arr.sum
+end
+
+# workin and final Solution
+def sum_array(arr)
+  arr.nil? || arr.empty? ? 0 : arr.sort[1..-2].sum
+end
