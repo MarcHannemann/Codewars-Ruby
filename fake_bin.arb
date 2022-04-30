@@ -1,0 +1,6 @@
+# fake_bin
+# ('45385593107843568'), '01011110001100111')
+
+def fake_bin(s)
+  s.split("").map { |i| i.to_i < 5 ? 0 : 1 }.join
+end
