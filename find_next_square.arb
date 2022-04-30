@@ -1,0 +1,20 @@
+# find_next_square
+
+# Test.assert_equals(find_next_square(121), 144, "Wrong output for 121")
+# Test.assert_equals(find_next_square(625), 676, "Wrong output for 625")
+# Test.assert_equals(find_next_square(319225), 320356, "Wrong output for 319225")
+# Test.assert_equals(find_next_square(15241383936), 15241630849, "Wrong output for 15241383936")
+
+# Root from sq + 1 ** 2
+def find_next_square(sq)
+  # Return the next square if sq is a perfect square, -1 otherwise
+  ( Math.sqrt(sq) + 1 ) ** 2
+  -1
+end
+
+Math.sqrt(sq) % 1 !=0 ? + 1 ** 2 : -1
+
+# working and Final Solution
+def find_next_square(sq)
+  (sq ** 0.5) % 1 !=0 ? -1 : ((sq ** 0.5) + 1) ** 2
+end
